@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 @extends('layout.app')
 @section('content')
         <section class="mt-6 px-4 md:px-8" aria-labelledby="jumbotron-heading-2">
@@ -7,12 +7,10 @@
                 class="bg-gray-50 grid items-center gap-4 max-w-7xl mx-auto rounded-lg overflow-hidden md:grid-cols-2 lg:grid-cols-3">
                 <div class="lg:col-span-2 p-6 md:p-8">
                     <h2 id="jumbotron-heading-2" class="text-2xl font-bold text-slate-900 md:text-3xl">
-                        Welcome To My Portofolio
+                        {{ $home->title }}
                     </h2>
                     <p class="mt-4 text-base text-slate-600 leading-relaxed">
-                        Hi, Perkenalkan saya Revaline. Saya berasal dari Universitas Ciputra Mkassar. Pada saat ini saya
-                        sedang membuat website portofolio untuk melengkapi tugas saya. mohon untuk menekan selanjutnya
-                        untuk mengetahui lebih dalam tentang saya.
+                        {{ $home->description }}
                     </p>
 
                     <a href="/about"
@@ -23,7 +21,7 @@
 
                 <div class="hidden md:flex items-center justify-center p-6">
                     <div class="bg-blue-100 rounded-full p-4">
-                        <img src="{{ asset('img/Repa.jpg') }}" alt="Loopy"
+                        <img src="{{ asset($home->image) }}" alt="{{ $home->title }}"
                             class="w-56 h-56 lg:w-72 lg:h-72 rounded-full object-cover" />
                     </div>
                 </div>

@@ -15,4 +15,4 @@
 
     @include('partial.footer')
 </Body>
-</html>
+</html> 

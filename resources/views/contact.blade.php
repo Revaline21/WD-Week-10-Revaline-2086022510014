@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="en">
-<html>
 @extends ('layout.app')
 @section ('content')
         <section class="bg-gray-100 px-4 md:px-8 py-6">
