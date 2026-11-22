@@ -14,11 +14,13 @@
             @foreach ($blogs as $blog)
             <article class="bg-white border border-slate-300 shadow-sm p-4 rounded-xl">
                 <div class="bg-gray-50 aspect-[22/13] rounded-xl overflow-hidden">
-                    <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="w-full h-full object-cover" />
+                    <img src="{{$blog ['image'] }}" alt="{{ $blog ['title'] }}" class="w-full h-full object-cover" />
                 </div>
                 <div class="mt-6">
-                    <h3 class="text-base font-semibold text-slate-900 mb-3">{{ $blog->title }}</h3>
-                    <p class="text-sm text-slate-600">{{ $blog->description }}</p>
+                    <h3 class="text-base font-semibold text-slate-900 mb-3">{{ $blog['title'] }}</h3>
+                    <p class="text-sm text-slate-600">{{ $blog ['description'] }}
+
+                    </p>
                 </div>
             </article>
             @endforeach
